@@ -9,4 +9,4 @@ To clear the screen, left or right click.
 The variables r, g and b represent what setting each color is on, ranging from 0 to 7. 
 The variables m, n and o represent the settings themselves, as in what value or function is used inside stroke() and fill().
 All the color settings are shown in the code, except for when r, g, and b are 0, which sets m, n, and o to 0.
-The color factors work because the screen is 510 pixels by 510 pixels, or 2*255 by 2*255.
+The color factors work because the screen is 510 pixels by 510 pixels, or 2x255 by 2x255.
