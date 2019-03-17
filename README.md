@@ -1,5 +1,6 @@
 # Square-Color-Mover
-the Square Color Mover code creates squares wherever the mouse. The RGB values can be set to either one of 3 constants, or a value that changes depending on the mouse's X and Y coordinates.
+the Square Color Mover code creates squares wherever the mouse goes. 
+The RGB values of the squares can be set to either one of 3 constants, or a value that changes depending on the mouse's X and Y coordinates.
 There are seven settings for each color (red, green, blue), and each color is represented by a variable (R, G, B).
 These settings are all shown in void draw().
 Almost everything is done using the keys. You can see this in void keyPressed().
