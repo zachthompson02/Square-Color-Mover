@@ -20,8 +20,7 @@ I made a ton of changes. The concept of the RGB values depending on the coordina
 The program now just uses a for loop to make a bunch of tiny squares, and the the location of the mouse doesn't matter anymore.
 There are now 12 settings for each color, and they are saved inside of arrays that update inside the foor loops in void draw().
 To change the color settings, right click and press the key for the setting you want in order red, green, blue. For settings 10 and
-11 use keys A and B.  Also, pressing S while holding down left click will save the pictur, and the file name will contain each color
-setting. Arrays are used a lot more in this code, which makes the whole code a lot shorter. Pressing 1 now makes the screen white. 
+11 use keys A and B.  Also, pressing S while holding down left click will save screen as an image, and the file name will contain each color setting. Arrays are used a lot more in this code, which makes the whole code a lot shorter. Pressing 1 now makes the screen white. 
 Because the code now fills the entire screen at once when a color setting is changed, I added a boolean squareCreated so the
 code only does it one time and doesn't keep filling the screen over and over in void draw(). I also put all keyboard events inside of 
 keyReleased instead of keyPressed so the code doesn't continually perform the events when a key is down. I also wrote and commented out
