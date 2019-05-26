@@ -28,3 +28,4 @@ a function inside of void keyReleased that will save image files of all possible
 is why I commented it out. Also, for some reason sometimes you have to click the mouse one time for the colors to actually change when you 
 press R.
 
+ALSO I ADVISE NOT TO USE THE COMMENTED OUT KEYPRESSED FUNCTION, I DID AND IT SLOWED MY COMPUTER DOWN A LOT!
