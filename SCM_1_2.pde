@@ -29,7 +29,7 @@ void keyReleased() {
   {
     u = 14;
   }
-  if(key == 'k' && mousePressed && mouseButton == RIGHT)
+  /*if(key == 'k' && mousePressed && mouseButton == RIGHT)
   {
     squareCreated = true;
     for(int d = 0; d < 15; d++)
@@ -70,7 +70,7 @@ void keyReleased() {
         }
       }
     }
-  }
+  }*/
   if(key == 's' && mousePressed && mouseButton == LEFT)
   {
     name = sets[0] + ", " + sets[1] + ", " + sets[2] + " ";
