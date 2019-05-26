@@ -26,5 +26,6 @@ Because the code now fills the entire screen at once when a color setting is cha
 code only does it one time and doesn't keep filling the screen over and over in void draw(). I also put all keyboard events inside of 
 keyReleased instead of keyPressed so the code doesn't continually perform the events when a key is down. I also wrote and commented out
 a function inside of void keyReleased that will save image files of all possible color combinations at once when the K key is released, if the right mouse button is down.  It took some time to save them all on my computer, and starts saving a ton of image files at once, which
-is why I commented it out. 
+is why I commented it out. Also, for some reason sometimes you have to click the mouse one time for the colors to actually change when you 
+press R.
 
