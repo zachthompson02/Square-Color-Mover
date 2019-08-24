@@ -1,20 +1,15 @@
-# Square-Color-Mover
+Creates "paintings" on the screen by placing a square at each pixel and making the RGB values of each square some function of its X and Y coordianates. 
 
-DESCRIPTION FOR ORIGINAL CODE (SquareColorMoverCode.pde)
-the Square Color Mover code creates squares wherever the mouse goes. 
-The RGB values of the squares can be set to either one of 3 constants, or a value that changes depending on the mouse's X and Y coordinates.
-There are seven settings for each color (red, green, blue), and each color is represented by a variable (R, G, B).
-These settings are all shown in void draw().
-Almost everything is done using the keys. You can see this in void keyPressed().
-Using the keys, you can switch between color settings, change the size of the squares being drawn, and see the settings for each color.
-Println() is used to display settings.
-To clear the screen, left or right click.
-The variables r, g and b represent what setting each color is on, ranging from 0 to 7. 
-The variables m, n and o represent the settings themselves, as in what value or function is used inside stroke() and fill().
-All the color settings are shown in the code, except for when r, g, and b are 0, which sets m, n, and o to 0.
-The color factors work because the screen is 510 pixels by 510 pixels, or 2x255 by 2x255.
+How it works:
+The function createSquare() contains all the (algebraic) functions of the coordinates that the RGB values are set to, where the coordinates are theX and theY, and the algebraic functions are contained inside of colors[], with the exception of colors[0]. The array sets[] contains the "settings" for each color, or which function in colors[] is chosen for each color. If an item in sets[] is 0, the RGB value will be set to a constant inside of the array constants[]. The first 3 items of sets[] are the settings for red, green, and blue. sets[4] is the 'toggle' variable, and it determines which item in toggles[] is used. toggles[] contains all the possible combinations of 3 booleans, also corresponding to the 3 RGB values. These booleans determine if the RGB values are "'toggled," meaning subtracted from 255. Although sets[3] is used very differently from the other items in sets[], it is treated mostly the same, especially from the user's standpoint. This works especially well because both colors[] and booleans[] have 8 items, meaning all 4 items in sets[] range from 0 to 7. Each "painting" is an individual combination of the sets[] variables, plus the constants if at least one item in sets[] is 0.
 
-DESCRIPTION FOR UPDATED CODE (SCM_1_2.pde)
-Even though nobody's seen this, I'll still edit this. I made a ton of changes. The concept of the RGB values depending on the coordinates is the same, but almost everything else is different. The program now just uses a for loop to make a bunch of tiny squares that take up the entire screen, and the the location of the mouse doesn't matter anymore. There are now 15 settings for each color, and they are saved inside of arrays that update inside the foor loops in void draw(). To change the color settings, right click and press the key for the setting you want in order red, green, blue. For settings 10 and 11 use keys A and B.  Also, pressing S while holding down left click will save screen as an image, and the file name will contain each color setting. Arrays are used a lot more in this code, which makes the whole code a lot shorter. Pressing 1 now makes the screen white. Because the code now fills the entire screen at once when a color setting is changed, I added a boolean squareCreated so the code only does it one time and doesn't keep filling the screen over and over in void draw(). I also put all keyboard events inside of keyReleased instead of keyPressed so the code doesn't continually perform the events when a key is down. I also wrote and commented out a function inside of void keyReleased that will save image files of all possible color combinations at once when the K key is released, if the right mouse button is down.  It took some time to save them all on my computer, and starts saving a ton of image files at once, which is why I commented it out. Also, for some reason sometimes you have to click the mouse one time for the colors to actually change when you press R.
-
-
+Controls:
+-Press and release the mouse once before doing anything.
+-Whenever any value of sets[] or constants[] is changed, it will be printed below the code.
+-To generate a random "painting," aka combination, press W. 
+-To choose a combination yourself, first press and hold the right mouse button. Then press the number keys in the order red, green, blue, toggle. You can release right click between settings, but it must be down when all 4 number keys are pressed.
+-If you make a mistake, release the mouse button and press 0. This will reset all settings back to 0 and you can start over.
+-Pressing the keys r, g, or b will toggle the changing of the constants[] for each RGB value. You can then press and hold arrow keys to change them. They change the values by 5 each time, and the values are also printed.
+-Press u to randomize the constants, and c to reset them to 0.
+-Press x to print all the settings and constants at once.
+-Press s while holding down left click to save the current screen as an image. The values of the items in sets[] will be in the image name. but not the values of constants[].
